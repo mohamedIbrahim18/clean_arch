@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun subscribe() {
-        viewModel.categoriesLiveData.observe(this){
-            if (it!!.isNotEmpty()){
-                Log.e("test",it[5]?.name!!)
+        viewModel.categoriesLiveData.observe(this) { categories ->
+            if (categories != null && categories.isNotEmpty() && categories.size > 5) {
+                Log.e("test", categories[1]?.name ?: "Name is null")
             }
         }
     }

@@ -41,7 +41,7 @@ object ApiModule {
     ): Retrofit {
         val retrofit = Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl("https://route-ecommerce.onrender.com/")
+            .baseUrl("https://ecommerce.routemisr.com/")
             .addConverterFactory(gsonConverterFactory)
             .build()
         return retrofit
